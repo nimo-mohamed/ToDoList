@@ -5,7 +5,7 @@
 
 const handleSubmit = (event) => {
     event.preventDefault();
-    const newToDo = toDoForm.target;
+    const newToDo = event.target["new-todo"].value;
     console.log(newToDo);
     const newListItem = document.createElement('li');
     newListItem.innerText = newToDo;
@@ -14,6 +14,7 @@ const handleSubmit = (event) => {
     list.appendChild(newListItem);
 
 }
+
 const toDoForm = document.querySelector('#todo-form');
 console.log(toDoForm);
 
