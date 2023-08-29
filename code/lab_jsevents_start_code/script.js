@@ -11,7 +11,7 @@ const handleSubmit = (event) => {
     newListItem.innerText = newToDo;
     const deleteButton = document.createElement('button');
     deleteButton.innerText = "Delete";
-    
+    deleteButton.addEventListener('click', handleDelete);
 
    
     const list = document.querySelector('#list');
@@ -32,7 +32,7 @@ const handleDelete = (event) => {
     list.removeChild(list.firstChild);
 }
 
-deleteButton.addEventListener('click', handleDelete);
+
 
 
 
